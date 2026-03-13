@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter_18pt-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter_18pt-Bold.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter_18pt-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(/fonts/Inter_18pt-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-Bold.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url(/fonts/SpaceGrotesk-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-space: "SpaceGrotesk", sans-serif;
+
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #a0a0a0;
+
+  --color-deep-space: #0a0a0f;
+  --color-cosmic-blue: #1a1a2e;
+  --color-nebula-purple: #16213e;
+  --color-starlight: #e94560;
+  --color-accent-cyan: #0f3460;
+
+  --color-glow: rgba(233, 69, 96, 0.3);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth scroll-p-16;
+  }
+  body {
+    @apply overflow-x-hidden font-space text-text-primary text-base bg-deep-space;
+  }
+  .container {
+    @apply max-w-7xl w-full mx-auto px-4;
+  }
+  h1 {
+    @apply text-[clamp(2rem,6vw,3rem)] font-bold;
+  }
+  h2 {
+    @apply text-[clamp(1.5rem,5vw,2.5rem)] font-bold;
+  }
+  h3 {
+    @apply text-[clamp(1.25rem,4vw,2rem)] font-bold;
+  }
+  h4 {
+    @apply text-[clamp(1rem,3vw,1.75rem)] font-bold;
+  }
+  h5 {
+    @apply text-xl font-semibold;
+  }
+  h6 {
+    @apply text-lg font-semibold;
+  }
+}
+
+@layer components {
+  header {
+    @apply bg-deep-space;
+  }
+  .headerNav ul {
+    @apply flex flex-col gap-10 text-white fixed w-full top-26 text-left  items-start overflow-hidden right-0 h-0 opacity-0 duration-300 
+        /* table - desktop */
+        md:opacity-100 md:flex-row md:items-center md:top-auto md:h-auto md:static md:shadow-none;
+  }
+  .headerNav ul.open {
+    @apply h-fit opacity-100 bg-deep-space text-white shadow-md w-full top-22 px-4 pb-3 duration-300 
+        /* table - desktop */
+        md:shadow-none md:px-0 md:pb-0;
+  }
+  .toggleMenu span {
+    @apply inline-block w-5 h-0.5 rounded-xl bg-white;
+  }
+  .toggleMenu.open span:first-child {
+    @apply rotate-45 translate-y-2 duration-100;
+  }
+  .toggleMenu.open span:nth-child(2) {
+    @apply opacity-0;
+  }
+  .toggleMenu.open span:last-child {
+    @apply -rotate-45 -translate-y-1;
+  }
+  .toggleMenu {
+    @apply flex flex-col gap-1 
+        /* tablet - desktop */
+        md:hidden;
+  }
+  .transparent {
+    @apply hidden;
+  }
+  .transparent.open {
+    @apply block fixed h-screen w-full backdrop-blur-sm left-0 top-91 duration-300 overflow-y-hidden;
+  }
+  .hero {
+    @apply  flex items-center justify-center text-center relative overflow-hidden;
+  }
+  .heroBadge {
+    @apply inline-flex items-center gap-2 border border-starlight text-starlight bg-starlight/10 px-4 py-2 rounded-full text-sm mb-6;
+  }
+
+  .heroTitle {
+    @apply text-[clamp(2.5rem,6vw,4rem)] font-bold leading-tight;
+  }
+
+  .heroTitle span {
+    @apply text-starlight;
+  }
+
+  .heroText {
+    @apply text-white/60 max-w-2xl mx-auto mt-4;
+  }
+
+  .heroBtns {
+    @apply flex justify-center gap-4 mt-8 flex-wrap;
+  }
+
+  .btnPrimary {
+    @apply bg-starlight px-6 py-3 rounded-full font-semibold text-white hover:scale-105 duration-300;
+  }
+
+  .btnSecondary {
+    @apply border border-white/30 px-6 py-3 rounded-full hover:border-starlight duration-300;
+  }
+  .stats {
+    @apply py-20;
+  }
+
+  .statsWrapper {
+    @apply grid md:grid-cols-4 gap-8;
+  }
+
+  .statCard {
+    @apply bg-cosmic-blue rounded-xl p-10 text-center border border-white/5 hover:border-starlight/40 duration-300;
+  }
+
+  .statNumber {
+    @apply text-3xl font-bold text-starlight;
+  }
+
+  .statLabel {
+    @apply text-white/60 mt-2;
+  }
+  .card {
+    @apply bg-transparent w-65 px-10 py-10 rounded-xl shadow-md  text-white text-center outline-1 flex flex-col items-center;
+  }
+  .card img{
+    @apply size-10 mb-6 text-center;
+  }
+  .card h3, h5{
+    @apply font-semibold mb-3 text-white;
+  }
+  .card p{
+    @apply mb-5;
+  }
+}
