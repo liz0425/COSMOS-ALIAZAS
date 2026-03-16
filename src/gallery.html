@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="py-7 fixed shadow-md w-full z-50">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="flex justify-between items-center">
+          <!-- logo -->
+          <div>
+            <h5 class="text-white text-2xl">
+              <span class="bg-starlight rounded-full">🚀</span> COSMOS
+            </h5>
+          </div>
+          <!-- nav -->
+          <nav class="headerNav">
+            <ul>
+              <li><a href="../src/index.html">Home</a></li>
+              <li><a href="../src/missions.html">Missions</a></li>
+              <li><a href="../src/spacecraft.html">Spacecraft</a></li>
+              <li><a href="../src/gallery.html">Gallery</a></li>
+              <li><a href="../src/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- toggle menu -->
+          <div class="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="transparent"></div>
+        </div>
+      </div>
+    </header>
+    <main class="bg-[#0b0f1a] pt-36 pb-24 min-h-screen relative z-10">
+      <div class="container relative z-10">
+        <div class="text-center mb-16 px-4">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
+          >
+            Cosmic Gallery
+          </h1>
+          <p
+            class="text-white/60 text-[15px] md:text-base max-w-2xl mx-auto leading-relaxed"
+          >
+            Breathtaking images from across the universe captured by our
+            missions and observatories.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+          <div
+            class="md:col-span-2 md:row-span-2 h-[300px] md:h-[504px] rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-lg"
+          >
+            <img
+              src="../img/gallery-1.jfif"
+              alt="Nebula Cloud"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <div
+            class="md:col-span-1 md:row-span-1 h-[300px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-lg"
+          >
+            <img
+              src="../img/3.jfif"
+              alt="Space Station Cupola"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <div
+            class="md:col-span-1 md:row-span-1 h-[300px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-lg"
+          >
+            <img
+              src="../img/2.jfif"
+              alt="Abstract Mars Texture"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <div
+            class="md:col-span-2 md:row-span-1 h-[300px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-lg"
+          >
+            <img
+              src="../img/gallery-1.jfif"
+              alt="Wide Nebula View"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <div
+            class="md:col-span-1 md:row-span-2 h-[300px] md:h-[504px] rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-lg"
+          >
+            <img
+              src="../img/gallery-2.jfif"
+              alt="Milky Way Galaxy"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+
+          <div
+            class="md:col-span-1 md:row-span-1 h-[300px] md:h-[240px] rounded-xl overflow-hidden group cursor-pointer border border-white/5 shadow-lg"
+          >
+            <img
+              src="../img/gallery-3.jfif"
+              alt="Starfield"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- script -->
+    <script src="../js/toggle-menu.js"></script>
+  </body>
+</html>
