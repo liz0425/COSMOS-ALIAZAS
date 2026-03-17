@@ -133,7 +133,7 @@
     @apply block fixed h-screen w-full backdrop-blur-sm left-0 top-91 duration-300 overflow-y-hidden;
   }
   .hero {
-    @apply  flex items-center justify-center text-center relative overflow-hidden;
+    @apply flex items-center justify-center text-center relative overflow-hidden;
   }
   .heroBadge {
     @apply inline-flex items-center gap-2 border border-starlight text-starlight bg-starlight/10 px-4 py-2 rounded-full text-sm mb-6;
@@ -184,13 +184,90 @@
   .card {
     @apply bg-transparent w-65 px-10 py-10 rounded-xl shadow-md  text-white text-center outline-1 flex flex-col items-center;
   }
-  .card img{
+  .card img {
     @apply size-10 mb-6 text-center;
   }
-  .card h3, h5{
+  .card h3,
+  h5 {
     @apply font-semibold mb-3 text-white;
   }
-  .card p{
+  .card p {
     @apply mb-5;
+  }
+  .contactPage {
+    @apply relative bg-deep-space overflow-hidden;
+  }
+
+  .contactBg {
+    @apply absolute inset-0 bg-[url('/IMG/stars.jpg')] bg-cover bg-center opacity-90;
+  }
+
+  .contactIntro {
+    @apply text-center max-w-2xl mx-auto mb-14 md:mb-16;
+  }
+
+  .contactIntro p {
+    @apply text-white/60 leading-relaxed max-w-xl mx-auto mt-4;
+  }
+
+  .contactLayout {
+    @apply grid lg:grid-cols-2 gap-12 lg:gap-14 max-w-5xl mx-auto items-start;
+  }
+
+  .contactLeft {
+    @apply pt-2;
+  }
+
+  .contactLeft p {
+    @apply text-white/65 leading-relaxed;
+  }
+
+  .contactLead {
+    @apply max-w-md mb-8 mt-4;
+  }
+
+  .contactInfoList {
+    @apply flex flex-col gap-8;
+  }
+
+  .contactInfoItem {
+    @apply flex flex-col items-center text-center lg:flex-row lg:items-start lg:text-left gap-4;
+  }
+
+  .contactInfoIcon {
+    @apply w-14 h-14 rounded-2xl bg-starlight/10 border border-white/10 flex items-center justify-center text-starlight shrink-0;
+  }
+
+  .contactInfoText h5 {
+    @apply text-white mb-2;
+  }
+
+  .contactInfoText p {
+    @apply text-white/55 text-sm leading-relaxed;
+  }
+
+  .contactFormCard {
+    @apply bg-cosmic-blue/75 border border-white/10 rounded-[28px] p-6 md:p-8 shadow-[0_10px_35px_rgba(0,0,0,0.30)] backdrop-blur-sm;
+  }
+
+  .contactFormWrap {
+    @apply flex flex-col gap-5 lg:text-left;
+  }
+
+  .contactFormWrap label {
+    @apply block text-sm text-white/75 mb-2;
+  }
+
+  .contactFormWrap input,
+  .contactFormWrap textarea {
+    @apply w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3.5 text-white outline-none placeholder:text-white/25 focus:border-starlight transition;
+  }
+
+  .contactFormWrap textarea {
+    @apply min-h-36 resize-none;
+  }
+
+  .contactSubmit {
+    @apply w-full bg-starlight px-6 py-4 rounded-full font-semibold text-white mt-2 shadow-[0_12px_30px_rgba(233,69,96,0.35)] hover:scale-[1.01] duration-300;
   }
 }
